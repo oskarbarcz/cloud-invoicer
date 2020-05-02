@@ -1,0 +1,35 @@
+.user
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &__image, &__logout
+    width: 40px
+    height: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+  &__image
+    font-size: 0.8em
+    user-select: none
+    background: #075fba
+    font-weight: 600
+    color: white
+  &__name, &__email
+    display: block
+    text-align: center
+  &__name
+    font-weight: 400
+    font-size: 0.8em
+  &__email
+    font-weight: 300
+    font-size: 0.7em
+  &__logout
+    @include shadow(1)
+    color: #FF2800
+    background: #F8F9FA
+    transition: 0.1s ease-in-out all
+    text-decoration: none
+    &:hover
+      background: #FF2800
+      color: white

@@ -1,0 +1,43 @@
+$text-font-stack: 'Roboto', sans-serif;
+
+$themes: (
+  "light": (
+    "foreground": #FFFFFF,
+    "foreground_action": darken(#FFFFFF, 10),
+    "background": #F8F9FA,
+    "background_action": darken(#FFFFFF, 15),
+    "contrast": #075fba,
+    "contrast_action": darken(#075fba, 10),
+    "danger": #cc3331,
+    "danger_action": darken(#cc3331, 10),
+    "text_light": #4e4d4d,
+    "text": #292929,
+    "dividing": #d9d9d9
+  ),
+  "dark": (
+    "foreground": #292929,
+    "foreground_action": lighten(#292929, 15),
+    "background": #111111,
+    "background_action": lighten(#111111, 15),
+    "contrast": lighten(#075fba, 10),
+    "contrast_action": #075fba,
+    "danger": #cc3331,
+    "danger_action": darken(#cc3331, 10),
+    "text_light": lighten(#4e4d4d, 25),
+    "text": #FFFFFF,
+    "dividing": lighten(#292929, 15)
+  ),
+  "darkest": (
+    "foreground": #191919,
+    "foreground_action": lighten(#292929, 5),
+    "background": #000000,
+    "background_action": lighten(#111111, 10),
+    "contrast": lighten(#075fba, 10),
+    "contrast_action": #075fba,
+    "danger": #cc3331,
+    "danger_action": darken(#cc3331, 10),
+    "text_light": #FFFFFF,
+    "text": #FFFFFF,
+    "dividing": lighten(#292929, 15)
+  )
+)

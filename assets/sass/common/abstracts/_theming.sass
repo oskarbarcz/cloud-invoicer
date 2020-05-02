@@ -1,0 +1,52 @@
+$color-foreground: null
+$color-foreground_action: null
+$color-background: null
+$color-background_action: null
+$color-contrast: null
+$color-contrast_action: null
+$color-danger: null
+$color-danger_action: null
+$color-text_light: null
+$color-text: null
+$color-dividing: null
+
+
+/// Themify mixin
+/// @author Hugo Giraudel
+/// @param {Map} $themes [$themes] - Map of themes to use
+@mixin themify($themes: $themes)
+  // Iterate over the themes
+  @each $theme, $colors in $themes
+    // Create a selector (e.g. `.media.theme-unicorn, .theme-unicorn .media`)
+    &.theme-#{$theme},
+    .theme-#{$theme} &
+      // Set the theme variables with `!global`
+      $color-primary: map-get($colors, 'primary') !global
+      $color-secondary: map-get($colors, 'secondary') !global
+      $color-foreground: map-get($colors, 'foreground') !global
+      $color-foreground_action: map-get($colors, 'foreground_action') !global
+      $color-background: map-get($colors, 'background') !global
+      $color-background_action: map-get($colors, 'background_action') !global
+      $color-contrast: map-get($colors, 'contrast') !global
+      $color-contrast_action: map-get($colors, 'contrast_action') !global
+      $color-danger: map-get($colors, 'danger') !global
+      $color-danger_action: map-get($colors, 'danger_action') !global
+      $color-text_light: map-get($colors, 'text_light') !global
+      $color-text: map-get($colors, 'text') !global
+      $color-dividing: map-get($colors, 'dividing') !global
+
+      // Output user content
+      @content
+
+      // Unset the theme variables with `!global`
+      $color-foreground: null !global
+      $color-foreground_action: null !global
+      $color-background: null !global
+      $color-background_action: null !global
+      $color-contrast: null !global
+      $color-contrast_action: null !global
+      $color-danger: null !global
+      $color-danger_action: null !global
+      $color-text_light: null !global
+      $color-text: null !global
+      $color-dividing: null !global
