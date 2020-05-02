@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <h1>Hello, this is consumer, client, your destiny or just - cloud_invoicer.</h1>
-    <p>Your new amazing token is just here:</p>
-    <pre><code>{{ token }}</code></pre>
+    {% if user is defined and user is not null %}
+        <p>Your user data are there:</p>
+        <p>{{ user.email }}</p>
+    {% endif %}
 {% endblock %}
