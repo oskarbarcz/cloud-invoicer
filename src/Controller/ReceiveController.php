@@ -21,23 +21,25 @@ use function dd;
 
 class ReceiveController extends AbstractController
 {
-    public const SSO_IP = '192.168.42.216:8000';
-
     private $serializer;
+    private $ssoHost;
+    private $selfHost;
 
-    public function __construct(SerializerInterface $serializer)
+    public function __construct(SerializerInterface $serializer, string $ssoHost, string $selfHost)
     {
         $this->serializer = $serializer;
+        $this->ssoHost = $ssoHost;
+        $this->selfHost = $selfHost;
     }
 
 
     /**
-     * @Route("/sso-base", name="sso_base")
+     * @Route("/login", name="sso_base")
      * @return Response
      */
-    public function actionThatRedirectsToLogin()
+    public function login()
     {
-        return $this->render('redirect.html.twig');
+        return $this->render('pages/login.html.twig');
     }
 
     /**
@@ -45,15 +47,14 @@ class ReceiveController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function startRedirecting(Request $request): Response
+    public function redirectToSso(Request $request): Response
     {
         if ($this->getUser() instanceof Account) {
             return $this->redirectToRoute('complete');
         }
 
-        $redirect = 'furtherRedirect=http://192.168.42.216:8080/sso-success';
-
-        $url = "http://".self::SSO_IP."/sso/login?".$redirect."&localSessionId=".$request->getClientIp();
+        $redirect = "furtherRedirect=http://{$this->selfHost}/sso-success";
+        $url = "http://".$this->ssoHost."/sso/login?".$redirect."&localSessionId=".$request->getClientIp();
 
         return $this->redirect($url);
     }
@@ -79,7 +80,7 @@ class ReceiveController extends AbstractController
                 ],
             ];
 
-            $response = $client->request('GET', 'http://'.self::SSO_IP.'/api/account/current', $options);
+            $response = $client->request('GET', 'http://'.$this->ssoHost.'/api/account/current', $options);
             $content = $response->getContent();
         } catch (TransportExceptionInterface $e) {
             dd($e);

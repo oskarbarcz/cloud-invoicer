@@ -1,0 +1,10 @@
+<div class="box user">
+    <span class="user__image">US</span>
+    <div class="user__data">
+        <span class="user__name">{{ app.user.name }} {{ app.user.surname }}</span>
+        <span class="user__email">{{ app.user.email }}</span>
+    </div>
+    <a href="{{ url('app_logout') }}" title="Logout" class="user__logout">
+        <span class="fas fa-sign-out-alt fa-fw"></span>
+    </a>
+</div>
