@@ -51,9 +51,9 @@ class ReceiveController extends AbstractController
             return $this->redirectToRoute('complete');
         }
 
-        $redirect = 'furtherRedirect=http://localhost:8080/sso-success';
+        $redirect = 'furtherRedirect=http://192.168.42.216:8080/sso-success';
 
-        $url = "http://".self::SSO_IP."/sso?".$redirect."&localSessionId=".$request->getClientIp();
+        $url = "http://".self::SSO_IP."/sso/login?".$redirect."&localSessionId=".$request->getClientIp();
 
         return $this->redirect($url);
     }
