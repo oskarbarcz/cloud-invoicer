@@ -21,9 +21,9 @@ use function dd;
 
 class ReceiveController extends AbstractController
 {
-    private $serializer;
-    private $ssoHost;
-    private $selfHost;
+    private SerializerInterface $serializer;
+    private string $ssoHost;
+    private string $selfHost;
 
     public function __construct(SerializerInterface $serializer, string $ssoHost, string $selfHost)
     {
@@ -91,6 +91,7 @@ class ReceiveController extends AbstractController
         } catch (ServerExceptionInterface $e) {
             dd($e);
         }
+        dd($content);
         $account = $this->serializer->deserialize($content, Account::class, 'json');
 
 

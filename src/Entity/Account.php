@@ -4,20 +4,48 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
-use Symfony\Component\Security\Core\User\UserInterface;
+use DateTime;
 
-use function array_unique;
-
-class Account implements UserInterface
+class Account
 {
-    private $id;
-    private $email;
-    private $roles = [];
-    private $password;
+    private ?string $uuiid = null;
+    private ?string $name = null;
+    private ?string $surname = null;
+    private ?string $email = null;
+    private ?array $roles = [];
+    private ?DateTime $createdAt = null;
 
-    public function getId(): ?int
+    public function getUuiid(): ?string
     {
-        return $this->id;
+        return $this->uuiid;
+    }
+
+    public function setUuiid(?string $uuiid): Account
+    {
+        $this->uuiid = $uuiid;
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(?string $name): Account
+    {
+        $this->name = $name;
+        return $this;
+    }
+
+    public function getSurname(): ?string
+    {
+        return $this->surname;
+    }
+
+    public function setSurname(?string $surname): Account
+    {
+        $this->surname = $surname;
+        return $this;
     }
 
     public function getEmail(): ?string
@@ -25,47 +53,33 @@ class Account implements UserInterface
         return $this->email;
     }
 
-    public function setEmail(string $email): self
+    public function setEmail(?string $email): Account
     {
         $this->email = $email;
-
         return $this;
     }
 
-    public function getUsername(): string
+    public function getRoles(): ?array
     {
-        return $this->email;
+        return $this->roles;
     }
 
-    public function getRoles(): array
-    {
-        $roles = $this->roles;
-        $roles[] = 'ROLE_USER';
-        return array_unique($roles);
-    }
-
-    public function setRoles(array $roles): self
+    public function setRoles(?array $roles): Account
     {
         $this->roles = $roles;
         return $this;
     }
 
-    public function getPassword(): string
+    public function getCreatedAt(): ?DateTime
     {
-        return $this->password;
+        return $this->createdAt;
     }
 
-    public function setPassword(string $password): self
+    public function setCreatedAt(?DateTime $createdAt): Account
     {
-        $this->password = $password;
+        $this->createdAt = $createdAt;
         return $this;
     }
 
-    public function getSalt()
-    {
-    }
 
-    public function eraseCredentials()
-    {
-    }
 }
