@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "e34008a828663114af92e0f84fb8caaa",
+  "content-hash": "7d09f212f6e386b3feea75ff9ad42b7b",
   "packages": [
     {
       "name": "doctrine/annotations",
@@ -1582,154 +1582,6 @@
       "time": "2020-04-13T14:42:16+00:00"
     },
     {
-      "name": "phpdocumentor/reflection-common",
-      "version": "2.1.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-        "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
-        "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
-        "shasum": ""
-      },
-      "require": {
-        "php": ">=7.1"
-      },
-      "type": "library",
-      "extra": {
-        "branch-alias": {
-          "dev-master": "2.x-dev"
-        }
-      },
-      "autoload": {
-        "psr-4": {
-          "phpDocumentor\\Reflection\\": "src/"
-        }
-      },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
-      "authors": [
-        {
-          "name": "Jaap van Otterdijk",
-          "email": "opensource@ijaap.nl"
-        }
-      ],
-      "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
-      "homepage": "http://www.phpdoc.org",
-      "keywords": [
-        "FQSEN",
-        "phpDocumentor",
-        "phpdoc",
-        "reflection",
-        "static analysis"
-      ],
-      "time": "2020-04-27T09:25:28+00:00"
-    },
-    {
-      "name": "phpdocumentor/reflection-docblock",
-      "version": "5.1.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-        "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
-        "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
-        "shasum": ""
-      },
-      "require": {
-        "ext-filter": "^7.1",
-        "php": "^7.2",
-        "phpdocumentor/reflection-common": "^2.0",
-        "phpdocumentor/type-resolver": "^1.0",
-        "webmozart/assert": "^1"
-      },
-      "require-dev": {
-        "doctrine/instantiator": "^1",
-        "mockery/mockery": "^1"
-      },
-      "type": "library",
-      "extra": {
-        "branch-alias": {
-          "dev-master": "5.x-dev"
-        }
-      },
-      "autoload": {
-        "psr-4": {
-          "phpDocumentor\\Reflection\\": "src"
-        }
-      },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
-      "authors": [
-        {
-          "name": "Mike van Riel",
-          "email": "me@mikevanriel.com"
-        },
-        {
-          "name": "Jaap van Otterdijk",
-          "email": "account@ijaap.nl"
-        }
-      ],
-      "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-      "time": "2020-02-22T12:28:44+00:00"
-    },
-    {
-      "name": "phpdocumentor/type-resolver",
-      "version": "1.1.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/phpDocumentor/TypeResolver.git",
-        "reference": "7462d5f123dfc080dfdf26897032a6513644fc95"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/7462d5f123dfc080dfdf26897032a6513644fc95",
-        "reference": "7462d5f123dfc080dfdf26897032a6513644fc95",
-        "shasum": ""
-      },
-      "require": {
-        "php": "^7.2",
-        "phpdocumentor/reflection-common": "^2.0"
-      },
-      "require-dev": {
-        "ext-tokenizer": "^7.2",
-        "mockery/mockery": "~1"
-      },
-      "type": "library",
-      "extra": {
-        "branch-alias": {
-          "dev-master": "1.x-dev"
-        }
-      },
-      "autoload": {
-        "psr-4": {
-          "phpDocumentor\\Reflection\\": "src"
-        }
-      },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
-      "authors": [
-        {
-          "name": "Mike van Riel",
-          "email": "me@mikevanriel.com"
-        }
-      ],
-      "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-      "time": "2020-02-18T18:59:58+00:00"
-    },
-    {
       "name": "psr/cache",
       "version": "1.0.1",
       "source": {
@@ -1750,16 +1602,16 @@
       "extra": {
         "branch-alias": {
           "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Cache\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Psr\\Cache\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
             ],
             "authors": [
                 {
@@ -1937,16 +1789,16 @@
                 "php": ">=5.3.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Log\\": "Psr/Log/"
-                }
-            },
+          "extra": {
+            "branch-alias": {
+              "dev-master": "1.1.x-dev"
+            }
+          },
+          "autoload": {
+            "psr-4": {
+              "Psr\\Log\\": "Psr/Log/"
+            }
+          },
           "notification-url": "https://packagist.org/downloads/",
           "license": [
             "MIT"
@@ -2060,16 +1912,16 @@
         "symfony/http-foundation": "^4.4|^5.0",
         "symfony/http-kernel": "^4.4|^5.0"
       },
-            "suggest": {
-                "symfony/http-foundation": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0-dev"
-                }
-            },
-            "autoload": {
+      "suggest": {
+        "symfony/http-foundation": ""
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "5.0-dev"
+        }
+      },
+      "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Asset\\": ""
                 },
@@ -2646,16 +2498,16 @@
         "symfony/process": "^4.4|^5.0"
       },
       "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Dotenv\\": ""
-                },
-                "exclude-from-classmap": [
+      "extra": {
+        "branch-alias": {
+          "dev-master": "5.0-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Symfony\\Component\\Dotenv\\": ""
+        },
+        "exclude-from-classmap": [
                     "/Tests/"
                 ]
             },
@@ -3212,14 +3064,14 @@
             "description": "Symfony FrameworkBundle",
             "homepage": "https://symfony.com",
             "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                  "type": "github"
-                },
+              {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+              },
+              {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+              },
               {
                 "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                 "type": "tidelift"
@@ -3377,16 +3229,16 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/symfony/http-foundation/zipball/e47fdf8b24edc12022ba52923150ec6484d7f57d",
-                "reference": "e47fdf8b24edc12022ba52923150ec6484d7f57d",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2.5",
-                "symfony/mime": "^4.4|^5.0",
-                "symfony/polyfill-mbstring": "~1.1"
-            },
-            "require-dev": {
-                "predis/predis": "~1.0",
+        "reference": "e47fdf8b24edc12022ba52923150ec6484d7f57d",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.2.5",
+        "symfony/mime": "^4.4|^5.0",
+        "symfony/polyfill-mbstring": "~1.1"
+      },
+      "require-dev": {
+        "predis/predis": "~1.0",
                 "symfony/expression-language": "^4.4|^5.0"
             },
             "type": "library",
@@ -3742,16 +3594,16 @@
       },
       "suggest": {
         "ext-intl": "For best performance"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.15-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.15-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Symfony\\Polyfill\\Intl\\Idn\\": ""
                 },
                 "files": [
                     "bootstrap.php"
@@ -4008,14 +3860,14 @@
                 "reflection"
             ],
             "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                  "type": "github"
-                },
+              {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+              },
+              {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+              },
               {
                 "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                 "type": "tidelift"
@@ -4023,96 +3875,6 @@
             ],
           "time": "2020-04-15T15:59:10+00:00"
         },
-    {
-      "name": "symfony/property-info",
-      "version": "v5.0.8",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/symfony/property-info.git",
-        "reference": "e9e40f14a2d2d163fb603f8646a76a6ff4b9426e"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/symfony/property-info/zipball/e9e40f14a2d2d163fb603f8646a76a6ff4b9426e",
-        "reference": "e9e40f14a2d2d163fb603f8646a76a6ff4b9426e",
-        "shasum": ""
-      },
-      "require": {
-        "php": "^7.2.5",
-        "symfony/inflector": "^4.4|^5.0"
-      },
-      "conflict": {
-        "phpdocumentor/reflection-docblock": "<3.2.2",
-        "phpdocumentor/type-resolver": "<0.3.0",
-        "symfony/dependency-injection": "<4.4"
-      },
-      "require-dev": {
-        "doctrine/annotations": "~1.7",
-        "phpdocumentor/reflection-docblock": "^3.0|^4.0",
-        "symfony/cache": "^4.4|^5.0",
-        "symfony/dependency-injection": "^4.4|^5.0",
-        "symfony/serializer": "^4.4|^5.0"
-      },
-      "suggest": {
-        "phpdocumentor/reflection-docblock": "To use the PHPDoc",
-        "psr/cache-implementation": "To cache results",
-        "symfony/doctrine-bridge": "To use Doctrine metadata",
-        "symfony/serializer": "To use Serializer metadata"
-      },
-      "type": "library",
-      "extra": {
-        "branch-alias": {
-          "dev-master": "5.0-dev"
-        }
-      },
-      "autoload": {
-        "psr-4": {
-          "Symfony\\Component\\PropertyInfo\\": ""
-        },
-        "exclude-from-classmap": [
-          "/Tests/"
-        ]
-      },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
-      "authors": [
-        {
-          "name": "Kévin Dunglas",
-          "email": "dunglas@gmail.com"
-        },
-        {
-          "name": "Symfony Community",
-          "homepage": "https://symfony.com/contributors"
-        }
-      ],
-      "description": "Symfony Property Info Component",
-      "homepage": "https://symfony.com",
-      "keywords": [
-        "doctrine",
-        "phpdoc",
-        "property",
-        "symfony",
-        "type",
-        "validator"
-      ],
-      "funding": [
-        {
-          "url": "https://symfony.com/sponsor",
-          "type": "custom"
-        },
-        {
-          "url": "https://github.com/fabpot",
-          "type": "github"
-        },
-        {
-          "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-          "type": "tidelift"
-        }
-      ],
-      "time": "2020-04-06T10:40:56+00:00"
-    },
     {
       "name": "symfony/routing",
       "version": "v5.0.8",
@@ -4124,16 +3886,16 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/symfony/routing/zipball/9b18480a6e101f8d9ab7c483ace7c19441be5111",
-                "reference": "9b18480a6e101f8d9ab7c483ace7c19441be5111",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2.5"
-            },
-            "conflict": {
-                "symfony/config": "<5.0",
-                "symfony/dependency-injection": "<4.4",
-                "symfony/yaml": "<4.4"
+        "reference": "9b18480a6e101f8d9ab7c483ace7c19441be5111",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.2.5"
+      },
+      "conflict": {
+        "symfony/config": "<5.0",
+        "symfony/dependency-injection": "<4.4",
+        "symfony/yaml": "<4.4"
             },
             "require-dev": {
                 "doctrine/annotations": "~1.2",
@@ -4592,14 +4354,14 @@
             "description": "Symfony Security Component - HTTP Integration",
             "homepage": "https://symfony.com",
             "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                  "type": "github"
-                },
+              {
+                "url": "https://symfony.com/sponsor",
+                "type": "custom"
+              },
+              {
+                "url": "https://github.com/fabpot",
+                "type": "github"
+              },
               {
                 "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
                 "type": "tidelift"
@@ -4607,146 +4369,6 @@
             ],
           "time": "2020-04-06T10:40:56+00:00"
         },
-    {
-      "name": "symfony/serializer",
-      "version": "v5.0.8",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/symfony/serializer.git",
-        "reference": "aa5d99bb179b5166cfe15d79dc067f516f3f4343"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/symfony/serializer/zipball/aa5d99bb179b5166cfe15d79dc067f516f3f4343",
-        "reference": "aa5d99bb179b5166cfe15d79dc067f516f3f4343",
-        "shasum": ""
-      },
-      "require": {
-        "php": "^7.2.5",
-        "symfony/polyfill-ctype": "~1.8"
-      },
-      "conflict": {
-        "phpdocumentor/type-resolver": "<0.2.1",
-        "symfony/dependency-injection": "<4.4",
-        "symfony/property-access": "<4.4",
-        "symfony/property-info": "<4.4",
-        "symfony/yaml": "<4.4"
-      },
-      "require-dev": {
-        "doctrine/annotations": "~1.0",
-        "doctrine/cache": "~1.0",
-        "phpdocumentor/reflection-docblock": "^3.2|^4.0",
-        "symfony/cache": "^4.4|^5.0",
-        "symfony/config": "^4.4|^5.0",
-        "symfony/dependency-injection": "^4.4|^5.0",
-        "symfony/error-handler": "^4.4|^5.0",
-        "symfony/http-foundation": "^4.4|^5.0",
-        "symfony/mime": "^4.4|^5.0",
-        "symfony/property-access": "^4.4|^5.0",
-        "symfony/property-info": "^4.4|^5.0",
-        "symfony/validator": "^4.4|^5.0",
-        "symfony/yaml": "^4.4|^5.0"
-      },
-      "suggest": {
-        "doctrine/annotations": "For using the annotation mapping. You will also need doctrine/cache.",
-        "doctrine/cache": "For using the default cached annotation reader and metadata cache.",
-        "psr/cache-implementation": "For using the metadata cache.",
-        "symfony/config": "For using the XML mapping loader.",
-        "symfony/mime": "For using a MIME type guesser within the DataUriNormalizer.",
-        "symfony/property-access": "For using the ObjectNormalizer.",
-        "symfony/property-info": "To deserialize relations.",
-        "symfony/yaml": "For using the default YAML mapping loader."
-      },
-      "type": "library",
-      "extra": {
-        "branch-alias": {
-          "dev-master": "5.0-dev"
-        }
-      },
-      "autoload": {
-        "psr-4": {
-          "Symfony\\Component\\Serializer\\": ""
-        },
-        "exclude-from-classmap": [
-          "/Tests/"
-        ]
-      },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
-      "authors": [
-        {
-          "name": "Fabien Potencier",
-          "email": "fabien@symfony.com"
-        },
-        {
-          "name": "Symfony Community",
-          "homepage": "https://symfony.com/contributors"
-        }
-      ],
-      "description": "Symfony Serializer Component",
-      "homepage": "https://symfony.com",
-      "funding": [
-        {
-          "url": "https://symfony.com/sponsor",
-          "type": "custom"
-        },
-        {
-          "url": "https://github.com/fabpot",
-          "type": "github"
-        },
-        {
-          "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-          "type": "tidelift"
-        }
-      ],
-      "time": "2020-04-12T16:45:47+00:00"
-    },
-    {
-      "name": "symfony/serializer-pack",
-      "version": "v1.0.3",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/symfony/serializer-pack.git",
-        "reference": "9bbce72dcad0cca797b678d3bfb764cf923ab28a"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/symfony/serializer-pack/zipball/9bbce72dcad0cca797b678d3bfb764cf923ab28a",
-        "reference": "9bbce72dcad0cca797b678d3bfb764cf923ab28a",
-        "shasum": ""
-      },
-      "require": {
-        "doctrine/annotations": "^1.0",
-        "php": "^7.0",
-        "phpdocumentor/reflection-docblock": "*",
-        "symfony/property-access": "*",
-        "symfony/property-info": "*",
-        "symfony/serializer": "*"
-      },
-      "type": "symfony-pack",
-      "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
-      "description": "A pack for the Symfony serializer",
-      "funding": [
-        {
-          "url": "https://symfony.com/sponsor",
-          "type": "custom"
-        },
-        {
-          "url": "https://github.com/fabpot",
-          "type": "github"
-        },
-        {
-          "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-          "type": "tidelift"
-        }
-      ],
-      "time": "2020-03-28T16:26:24+00:00"
-    },
     {
       "name": "symfony/service-contracts",
       "version": "v2.0.1",
@@ -4758,16 +4380,16 @@
       "dist": {
         "type": "zip",
         "url": "https://api.github.com/repos/symfony/service-contracts/zipball/144c5e51266b281231e947b51223ba14acf1a749",
-                "reference": "144c5e51266b281231e947b51223ba14acf1a749",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2.5",
-                "psr/container": "^1.0"
-            },
-            "suggest": {
-                "symfony/service-implementation": ""
-            },
+        "reference": "144c5e51266b281231e947b51223ba14acf1a749",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.2.5",
+        "psr/container": "^1.0"
+      },
+      "suggest": {
+        "symfony/service-implementation": ""
+      },
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -4785,16 +4407,16 @@
             ],
             "authors": [
                 {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
+                  "name": "Nicolas Grekas",
+                  "email": "p@tchwork.com"
                 },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
+              {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+              }
             ],
-            "description": "Generic abstractions related to writing services",
-            "homepage": "https://symfony.com",
+      "description": "Generic abstractions related to writing services",
+      "homepage": "https://symfony.com",
       "keywords": [
         "abstractions",
         "contracts",
@@ -4890,16 +4512,16 @@
       "conflict": {
         "phpunit/phpunit": "<5.4.3",
         "symfony/console": "<4.4"
-            },
-            "require-dev": {
-                "ext-iconv": "*",
-                "symfony/console": "^4.4|^5.0",
-                "symfony/process": "^4.4|^5.0",
-                "twig/twig": "^2.4|^3.0"
-            },
-            "suggest": {
-                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
-                "ext-intl": "To show region name in time zone dump",
+      },
+      "require-dev": {
+        "ext-iconv": "*",
+        "symfony/console": "^4.4|^5.0",
+        "symfony/process": "^4.4|^5.0",
+        "twig/twig": "^2.4|^3.0"
+      },
+      "suggest": {
+        "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+        "ext-intl": "To show region name in time zone dump",
                 "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
             },
             "bin": [
@@ -5300,35 +4922,87 @@
         }
       ],
       "time": "2020-03-21T15:49:08+00:00"
-    },
+    }
+  ],
+  "packages-dev": [
     {
-      "name": "webmozart/assert",
-      "version": "1.8.0",
+      "name": "nikic/php-parser",
+      "version": "v4.4.0",
       "source": {
         "type": "git",
-        "url": "https://github.com/webmozart/assert.git",
-        "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
+        "url": "https://github.com/nikic/PHP-Parser.git",
+        "reference": "bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
-        "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+        "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120",
+        "reference": "bd43ec7152eaaab3bd8c6d0aa95ceeb1df8ee120",
         "shasum": ""
       },
       "require": {
-        "php": "^5.3.3 || ^7.0",
-        "symfony/polyfill-ctype": "^1.8"
-      },
-      "conflict": {
-        "vimeo/psalm": "<3.9.1"
+        "ext-tokenizer": "*",
+        "php": ">=7.0"
       },
       "require-dev": {
-        "phpunit/phpunit": "^4.8.36 || ^7.5.13"
+        "ircmaxell/php-yacc": "0.0.5",
+        "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
       },
+      "bin": [
+        "bin/php-parse"
+      ],
       "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "4.3-dev"
+        }
+      },
       "autoload": {
         "psr-4": {
-          "Webmozart\\Assert\\": "src/"
+          "PhpParser\\": "lib/PhpParser"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "authors": [
+        {
+          "name": "Nikita Popov"
+        }
+      ],
+      "description": "A PHP parser written in PHP",
+      "keywords": [
+        "parser",
+        "php"
+      ],
+      "time": "2020-04-10T16:34:50+00:00"
+    },
+    {
+      "name": "phpdocumentor/reflection-common",
+      "version": "2.1.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
+        "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
+        "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=7.1"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "2.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "phpDocumentor\\Reflection\\": "src/"
         }
       },
       "notification-url": "https://packagist.org/downloads/",
@@ -5337,20 +5011,202 @@
       ],
       "authors": [
         {
-          "name": "Bernhard Schussek",
-          "email": "bschussek@gmail.com"
+          "name": "Jaap van Otterdijk",
+          "email": "opensource@ijaap.nl"
         }
       ],
-      "description": "Assertions to validate method input/output with nice error messages.",
+      "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
+      "homepage": "http://www.phpdoc.org",
       "keywords": [
-        "assert",
-        "check",
-        "validate"
+        "FQSEN",
+        "phpDocumentor",
+        "phpdoc",
+        "reflection",
+        "static analysis"
       ],
-      "time": "2020-04-18T12:12:48+00:00"
-    }
-  ],
-  "packages-dev": [
+      "time": "2020-04-27T09:25:28+00:00"
+    },
+    {
+      "name": "phpdocumentor/reflection-docblock",
+      "version": "5.1.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
+        "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
+        "reference": "cd72d394ca794d3466a3b2fc09d5a6c1dc86b47e",
+        "shasum": ""
+      },
+      "require": {
+        "ext-filter": "^7.1",
+        "php": "^7.2",
+        "phpdocumentor/reflection-common": "^2.0",
+        "phpdocumentor/type-resolver": "^1.0",
+        "webmozart/assert": "^1"
+      },
+      "require-dev": {
+        "doctrine/instantiator": "^1",
+        "mockery/mockery": "^1"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "5.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "phpDocumentor\\Reflection\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Mike van Riel",
+          "email": "me@mikevanriel.com"
+        },
+        {
+          "name": "Jaap van Otterdijk",
+          "email": "account@ijaap.nl"
+        }
+      ],
+      "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
+      "time": "2020-02-22T12:28:44+00:00"
+    },
+    {
+      "name": "phpdocumentor/type-resolver",
+      "version": "1.1.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/phpDocumentor/TypeResolver.git",
+        "reference": "7462d5f123dfc080dfdf26897032a6513644fc95"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/7462d5f123dfc080dfdf26897032a6513644fc95",
+        "reference": "7462d5f123dfc080dfdf26897032a6513644fc95",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.2",
+        "phpdocumentor/reflection-common": "^2.0"
+      },
+      "require-dev": {
+        "ext-tokenizer": "^7.2",
+        "mockery/mockery": "~1"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.x-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "phpDocumentor\\Reflection\\": "src"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Mike van Riel",
+          "email": "me@mikevanriel.com"
+        }
+      ],
+      "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
+      "time": "2020-02-18T18:59:58+00:00"
+    },
+    {
+      "name": "symfony/maker-bundle",
+      "version": "v1.18.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/maker-bundle.git",
+        "reference": "b38c75be880b152ab55cef6cd52bf882d2b6518e"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/b38c75be880b152ab55cef6cd52bf882d2b6518e",
+        "reference": "b38c75be880b152ab55cef6cd52bf882d2b6518e",
+        "shasum": ""
+      },
+      "require": {
+        "doctrine/inflector": "^1.2",
+        "nikic/php-parser": "^4.0",
+        "php": "^7.1.3",
+        "symfony/config": "^3.4|^4.0|^5.0",
+        "symfony/console": "^3.4|^4.0|^5.0",
+        "symfony/dependency-injection": "^3.4|^4.0|^5.0",
+        "symfony/filesystem": "^3.4|^4.0|^5.0",
+        "symfony/finder": "^3.4|^4.0|^5.0",
+        "symfony/framework-bundle": "^3.4|^4.0|^5.0",
+        "symfony/http-kernel": "^3.4|^4.0|^5.0"
+      },
+      "require-dev": {
+        "doctrine/doctrine-bundle": "^1.8|^2.0",
+        "doctrine/orm": "^2.3",
+        "friendsofphp/php-cs-fixer": "^2.8",
+        "friendsoftwig/twigcs": "^3.1.2",
+        "symfony/http-client": "^4.3|^5.0",
+        "symfony/phpunit-bridge": "^4.3|^5.0",
+        "symfony/process": "^3.4|^4.0|^5.0",
+        "symfony/security-core": "^3.4|^4.0|^5.0",
+        "symfony/yaml": "^3.4|^4.0|^5.0"
+      },
+      "type": "symfony-bundle",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "1.0-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Symfony\\Bundle\\MakerBundle\\": "src/"
+        }
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Symfony Community",
+          "homepage": "https://symfony.com/contributors"
+        }
+      ],
+      "description": "Symfony Maker helps you create empty commands, controllers, form classes, tests and more so you can forget about writing boilerplate code.",
+      "homepage": "https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html",
+      "keywords": [
+        "code generator",
+        "generator",
+        "scaffold",
+        "scaffolding"
+      ],
+      "funding": [
+        {
+          "url": "https://symfony.com/sponsor",
+          "type": "custom"
+        },
+        {
+          "url": "https://github.com/fabpot",
+          "type": "github"
+        },
+        {
+          "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+          "type": "tidelift"
+        }
+      ],
+      "time": "2020-05-15T18:51:23+00:00"
+    },
     {
       "name": "symfony/profiler-pack",
       "version": "v1.0.4",
@@ -5360,36 +5216,266 @@
         "reference": "99c4370632c2a59bb0444852f92140074ef02209"
       },
       "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/profiler-pack/zipball/99c4370632c2a59bb0444852f92140074ef02209",
-                "reference": "99c4370632c2a59bb0444852f92140074ef02209",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0",
-                "symfony/stopwatch": "*",
-                "symfony/twig-bundle": "*",
-                "symfony/web-profiler-bundle": "*"
-            },
-            "type": "symfony-pack",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A pack for the Symfony web profiler",
-            "time": "2018-12-10T12:11:44+00:00"
+        "type": "zip",
+        "url": "https://api.github.com/repos/symfony/profiler-pack/zipball/99c4370632c2a59bb0444852f92140074ef02209",
+        "reference": "99c4370632c2a59bb0444852f92140074ef02209",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.0",
+        "symfony/stopwatch": "*",
+        "symfony/twig-bundle": "*",
+        "symfony/web-profiler-bundle": "*"
+      },
+      "type": "symfony-pack",
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "description": "A pack for the Symfony web profiler",
+      "time": "2018-12-10T12:11:44+00:00"
+    },
+    {
+      "name": "symfony/property-info",
+      "version": "v5.0.8",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/property-info.git",
+        "reference": "e9e40f14a2d2d163fb603f8646a76a6ff4b9426e"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/symfony/property-info/zipball/e9e40f14a2d2d163fb603f8646a76a6ff4b9426e",
+        "reference": "e9e40f14a2d2d163fb603f8646a76a6ff4b9426e",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.2.5",
+        "symfony/inflector": "^4.4|^5.0"
+      },
+      "conflict": {
+        "phpdocumentor/reflection-docblock": "<3.2.2",
+        "phpdocumentor/type-resolver": "<0.3.0",
+        "symfony/dependency-injection": "<4.4"
+      },
+      "require-dev": {
+        "doctrine/annotations": "~1.7",
+        "phpdocumentor/reflection-docblock": "^3.0|^4.0",
+        "symfony/cache": "^4.4|^5.0",
+        "symfony/dependency-injection": "^4.4|^5.0",
+        "symfony/serializer": "^4.4|^5.0"
+      },
+      "suggest": {
+        "phpdocumentor/reflection-docblock": "To use the PHPDoc",
+        "psr/cache-implementation": "To cache results",
+        "symfony/doctrine-bridge": "To use Doctrine metadata",
+        "symfony/serializer": "To use Serializer metadata"
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "5.0-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Symfony\\Component\\PropertyInfo\\": ""
+        },
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Kévin Dunglas",
+          "email": "dunglas@gmail.com"
         },
         {
-            "name": "symfony/translation-contracts",
-            "version": "v2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/translation-contracts.git",
-                "reference": "8cc682ac458d75557203b2f2f14b0b92e1c744ed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/8cc682ac458d75557203b2f2f14b0b92e1c744ed",
+          "name": "Symfony Community",
+          "homepage": "https://symfony.com/contributors"
+        }
+      ],
+      "description": "Symfony Property Info Component",
+      "homepage": "https://symfony.com",
+      "keywords": [
+        "doctrine",
+        "phpdoc",
+        "property",
+        "symfony",
+        "type",
+        "validator"
+      ],
+      "funding": [
+        {
+          "url": "https://symfony.com/sponsor",
+          "type": "custom"
+        },
+        {
+          "url": "https://github.com/fabpot",
+          "type": "github"
+        },
+        {
+          "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+          "type": "tidelift"
+        }
+      ],
+      "time": "2020-04-06T10:40:56+00:00"
+    },
+    {
+      "name": "symfony/serializer",
+      "version": "v5.0.8",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/serializer.git",
+        "reference": "aa5d99bb179b5166cfe15d79dc067f516f3f4343"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/symfony/serializer/zipball/aa5d99bb179b5166cfe15d79dc067f516f3f4343",
+        "reference": "aa5d99bb179b5166cfe15d79dc067f516f3f4343",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^7.2.5",
+        "symfony/polyfill-ctype": "~1.8"
+      },
+      "conflict": {
+        "phpdocumentor/type-resolver": "<0.2.1",
+        "symfony/dependency-injection": "<4.4",
+        "symfony/property-access": "<4.4",
+        "symfony/property-info": "<4.4",
+        "symfony/yaml": "<4.4"
+      },
+      "require-dev": {
+        "doctrine/annotations": "~1.0",
+        "doctrine/cache": "~1.0",
+        "phpdocumentor/reflection-docblock": "^3.2|^4.0",
+        "symfony/cache": "^4.4|^5.0",
+        "symfony/config": "^4.4|^5.0",
+        "symfony/dependency-injection": "^4.4|^5.0",
+        "symfony/error-handler": "^4.4|^5.0",
+        "symfony/http-foundation": "^4.4|^5.0",
+        "symfony/mime": "^4.4|^5.0",
+        "symfony/property-access": "^4.4|^5.0",
+        "symfony/property-info": "^4.4|^5.0",
+        "symfony/validator": "^4.4|^5.0",
+        "symfony/yaml": "^4.4|^5.0"
+      },
+      "suggest": {
+        "doctrine/annotations": "For using the annotation mapping. You will also need doctrine/cache.",
+        "doctrine/cache": "For using the default cached annotation reader and metadata cache.",
+        "psr/cache-implementation": "For using the metadata cache.",
+        "symfony/config": "For using the XML mapping loader.",
+        "symfony/mime": "For using a MIME type guesser within the DataUriNormalizer.",
+        "symfony/property-access": "For using the ObjectNormalizer.",
+        "symfony/property-info": "To deserialize relations.",
+        "symfony/yaml": "For using the default YAML mapping loader."
+      },
+      "type": "library",
+      "extra": {
+        "branch-alias": {
+          "dev-master": "5.0-dev"
+        }
+      },
+      "autoload": {
+        "psr-4": {
+          "Symfony\\Component\\Serializer\\": ""
+        },
+        "exclude-from-classmap": [
+          "/Tests/"
+        ]
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Fabien Potencier",
+          "email": "fabien@symfony.com"
+        },
+        {
+          "name": "Symfony Community",
+          "homepage": "https://symfony.com/contributors"
+        }
+      ],
+      "description": "Symfony Serializer Component",
+      "homepage": "https://symfony.com",
+      "funding": [
+        {
+          "url": "https://symfony.com/sponsor",
+          "type": "custom"
+        },
+        {
+          "url": "https://github.com/fabpot",
+          "type": "github"
+        },
+        {
+          "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+          "type": "tidelift"
+        }
+      ],
+      "time": "2020-04-12T16:45:47+00:00"
+    },
+    {
+      "name": "symfony/serializer-pack",
+      "version": "v1.0.3",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/serializer-pack.git",
+        "reference": "9bbce72dcad0cca797b678d3bfb764cf923ab28a"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/symfony/serializer-pack/zipball/9bbce72dcad0cca797b678d3bfb764cf923ab28a",
+        "reference": "9bbce72dcad0cca797b678d3bfb764cf923ab28a",
+        "shasum": ""
+      },
+      "require": {
+        "doctrine/annotations": "^1.0",
+        "php": "^7.0",
+        "phpdocumentor/reflection-docblock": "*",
+        "symfony/property-access": "*",
+        "symfony/property-info": "*",
+        "symfony/serializer": "*"
+      },
+      "type": "symfony-pack",
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "description": "A pack for the Symfony serializer",
+      "funding": [
+        {
+          "url": "https://symfony.com/sponsor",
+          "type": "custom"
+        },
+        {
+          "url": "https://github.com/fabpot",
+          "type": "github"
+        },
+        {
+          "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+          "type": "tidelift"
+        }
+      ],
+      "time": "2020-03-28T16:26:24+00:00"
+    },
+    {
+      "name": "symfony/translation-contracts",
+      "version": "v2.0.1",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/symfony/translation-contracts.git",
+        "reference": "8cc682ac458d75557203b2f2f14b0b92e1c744ed"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/8cc682ac458d75557203b2f2f14b0b92e1c744ed",
                 "reference": "8cc682ac458d75557203b2f2f14b0b92e1c744ed",
                 "shasum": ""
             },
@@ -5771,27 +5857,75 @@
                 },
                 {
                     "name": "Armin Ronacher",
-                    "email": "armin.ronacher@active-4.com",
-                    "role": "Project Founder"
+                  "email": "armin.ronacher@active-4.com",
+                  "role": "Project Founder"
                 }
             ],
-            "description": "Twig, the flexible, fast, and secure template language for PHP",
-            "homepage": "https://twig.symfony.com",
-            "keywords": [
-                "templating"
-            ],
-            "time": "2020-02-11T15:33:47+00:00"
+          "description": "Twig, the flexible, fast, and secure template language for PHP",
+          "homepage": "https://twig.symfony.com",
+          "keywords": [
+            "templating"
+          ],
+          "time": "2020-02-11T15:33:47+00:00"
+        },
+    {
+      "name": "webmozart/assert",
+      "version": "1.8.0",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/webmozart/assert.git",
+        "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
+      },
+      "dist": {
+        "type": "zip",
+        "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+        "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+        "shasum": ""
+      },
+      "require": {
+        "php": "^5.3.3 || ^7.0",
+        "symfony/polyfill-ctype": "^1.8"
+      },
+      "conflict": {
+        "vimeo/psalm": "<3.9.1"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^4.8.36 || ^7.5.13"
+      },
+      "type": "library",
+      "autoload": {
+        "psr-4": {
+          "Webmozart\\Assert\\": "src/"
         }
-    ],
+      },
+      "notification-url": "https://packagist.org/downloads/",
+      "license": [
+        "MIT"
+      ],
+      "authors": [
+        {
+          "name": "Bernhard Schussek",
+          "email": "bschussek@gmail.com"
+        }
+      ],
+      "description": "Assertions to validate method input/output with nice error messages.",
+      "keywords": [
+        "assert",
+        "check",
+        "validate"
+      ],
+      "time": "2020-04-18T12:12:48+00:00"
+    }
+  ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2.5",
-        "ext-ctype": "*",
-        "ext-iconv": "*"
+      "php": "^7.4",
+      "ext-ctype": "*",
+      "ext-iconv": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"

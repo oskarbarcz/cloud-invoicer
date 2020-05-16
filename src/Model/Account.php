@@ -2,27 +2,28 @@
 
 declare(strict_types=1);
 
-namespace App\Entity;
+namespace App\Model;
 
 use DateTime;
+use Symfony\Component\Security\Core\User\UserInterface;
 
-class Account
+class Account implements UserInterface
 {
-    private ?string $uuiid = null;
+    private ?string $uuid = null;
     private ?string $name = null;
     private ?string $surname = null;
     private ?string $email = null;
     private ?array $roles = [];
     private ?DateTime $createdAt = null;
 
-    public function getUuiid(): ?string
+    public function getUuid(): ?string
     {
-        return $this->uuiid;
+        return $this->uuid;
     }
 
-    public function setUuiid(?string $uuiid): Account
+    public function setUuid(?string $uuid): Account
     {
-        $this->uuiid = $uuiid;
+        $this->uuid = $uuid;
         return $this;
     }
 
@@ -81,5 +82,24 @@ class Account
         return $this;
     }
 
+    /** @inheritDoc */
+    public function getPassword(): void
+    {
+    }
 
+    /** @inheritDoc */
+    public function getSalt(): void
+    {
+    }
+
+    /** @inheritDoc */
+    public function getUsername(): string
+    {
+        return "{$this->name} {$this->surname}";
+    }
+
+    /** @inheritDoc */
+    public function eraseCredentials(): void
+    {
+    }
 }

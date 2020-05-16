@@ -14,3 +14,7 @@ services:
     arguments:
       $ssoHost: '%env(string:SSO_SERVER_HOST)%'
       $selfHost: '%env(string:SELF_SERVER_HOST)%'
+
+  App\Security\AccountProvider:
+    arguments:
+      $ssoHost: '%env(string:SSO_SERVER_HOST)%'
