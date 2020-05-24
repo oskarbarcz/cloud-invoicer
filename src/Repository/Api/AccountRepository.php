@@ -51,6 +51,7 @@ class AccountRepository extends AbstractApiRepository
      */
     public function obtainNewToken(string $refreshToken): ?RefreshTokenResponse
     {
+        dd($refreshToken);
         try {
             return $this->fetchEndpoint(
                 self::REFRESH_TOKEN_ENDPOINT,
