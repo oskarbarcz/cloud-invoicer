@@ -6,12 +6,8 @@ namespace App\Security;
 
 use App\Model\Account;
 use App\Repository\Api\AccountRepository;
-use Exception;
-use RuntimeException;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
-use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
-use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
@@ -35,14 +31,7 @@ class AccountProvider implements UserProviderInterface
     /** @inheritDoc */
     public function loadUserByUsername(string $token): UserInterface
     {
-        $account = $this->fetchUser();
-
-        if (!$account instanceof Account) {
-            // todo: think when NULL will be returned
-            throw new UsernameNotFoundException('Auth error occured.');
-        }
-
-        return $account;
+        return $this->fetchUser();
     }
 
     /**
@@ -58,62 +47,59 @@ class AccountProvider implements UserProviderInterface
      *
      * @param UserInterface $user
      * @return UserInterface
-     * @throws UnsupportedUserException
-     * @throws Exception
      */
     public function refreshUser(UserInterface $user): ?UserInterface
     {
-        // in case token lost or never set
-        if (!$this->session->has('jwt_token')) {
-            return null;
-        }
-
         return $this->fetchUser();
     }
 
     /**
-     * @return Account|null
-     * @throws RedirectionExceptionInterface
-     * @throws ServerExceptionInterface
-     * @throws TransportExceptionInterface
-     */
-    public function fetchUser(): ?Account
-    {
-        try {
-            $account = $this->repository->findUserByToken($this->session->get('jwt_token'));
-        } catch (AuthenticationException $e) {
-            // this never happens on user load, but may happen on user refresh (if JWT token is outdated)
-            $this->refreshToken($this->session->get('refresh_token'));
-
-            $account = $this->repository->findUserByToken($this->session->get('jwt_token'));
-        } finally {
-            // returns account if token is valid, if token is successfully refreshed and false if refreshment didn't went well
-            return $account;
-        }
-    }
-
-    /**
-     * @param string $refresh
-     */
-    private function refreshToken(string $refresh): void
-    {
-        $response = $this->repository->obtainNewToken($refresh);
-
-        if ($response === null) {
-            throw new RuntimeException('abcd');
-        }
-
-        $this->session->set('jwt_token', $response->getToken());
-        $this->session->set('refresh_token', $response->getRefreshToken());
-    }
-
-    /**
      * Tells Symfony to use this provider for this User class.
+     *
      * @param string $class
      * @return bool
      */
     public function supportsClass(string $class): bool
     {
         return Account::class === $class;
+    }
+
+    /**
+     * Fetches user from Cloud SSO API
+     *
+     * @return Account|null
+     * @throws RedirectionExceptionInterface
+     * @throws ServerExceptionInterface
+     * @throws TransportExceptionInterface
+     */
+    private function fetchUser(): ?Account
+    {
+        try {
+            $account = $this->repository->findUserByToken($this->session->get('jwt_token'));
+        } catch (AuthenticationException $e) {
+            // this never happens on user load, but may happen on user refresh (if JWT token is outdated)
+            $this->refreshToken($this->session->get('refresh_token'));
+            $account = $this->repository->findUserByToken($this->session->get('jwt_token'));
+        } finally {
+            // returns account if token is valid, if token is refreshed and null if refreshment didn't went well
+            return $account;
+        }
+    }
+
+    /**
+     * Sets new pair of tokens in session
+     *
+     * Called when request with current token returned with status 401
+     *
+     * @param string $refresh
+     */
+    private function refreshToken(string $refresh): void
+    {
+        $response = $this->repository->obtainNewToken($refresh);
+
+        if ($response !== null) {
+            $this->session->set('jwt_token', $response->getToken());
+            $this->session->set('refresh_token', $response->getRefreshToken());
+        }
     }
 }
