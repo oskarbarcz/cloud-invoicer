@@ -19,8 +19,7 @@
         </li>
         {% if app.user %}
             <li class="navbar__element">
-                <a class="navbar__link navbar__link--buttonized"
-                   href="">{{ app.user.name }} {{ app.user.surname }}</a>
+                {% include 'components/dashboard/user-button.html.twig' with {'user': app.user} only %}
             </li>
         {% else %}
             <li class="navbar__element">
