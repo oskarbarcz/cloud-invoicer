@@ -1,1 +1,26 @@
 .user-button
+  background: #075fba
+  border-radius: 3px
+  font-size: 0.9em
+  color: white
+  display: flex
+  align-items: center
+  &__text
+    font-weight: 300
+    padding: 0 15px
+  &__logout
+    height: 35px
+    width: 35px
+    border-radius: 3px
+    // fix border radius bug in chrome
+    transform: translateX(2px)
+    background: darken(#075fba, 10)
+    color: white
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    transition: 0.1s ease-in-out
+    &:hover
+      background: darken(#FF2800, 5)
+

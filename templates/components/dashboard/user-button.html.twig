@@ -1,5 +1,4 @@
-<li class="navbar__element">
-    <div class="user-button">
-        <div class="user-button__initials">{{ user.name|first }}{{ user.surname|first }}</div>
-    </div>
-</li>
+<div class="user-button">
+    <span class="user-button__text">{{ user.name }} {{ user.surname }}</span>
+    <a href="{{ url('app_logout') }}" class="user-button__logout">&#8618;</a>
+</div>
