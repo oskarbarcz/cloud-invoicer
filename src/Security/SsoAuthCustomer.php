@@ -6,6 +6,7 @@ namespace App\Security;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
@@ -19,10 +20,12 @@ use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
 class SsoAuthCustomer extends AbstractGuardAuthenticator
 {
     private UrlGeneratorInterface $urlGenerator;
+    private SessionInterface $session;
 
-    public function __construct(UrlGeneratorInterface $urlGenerator)
+    public function __construct(UrlGeneratorInterface $urlGenerator, SessionInterface $session)
     {
         $this->urlGenerator = $urlGenerator;
+        $this->session = $session;
     }
 
     /** @inheritDoc */
@@ -34,7 +37,11 @@ class SsoAuthCustomer extends AbstractGuardAuthenticator
     /** @inheritDoc */
     public function getCredentials(Request $request): array
     {
-        return ['token' => $request->get('token')];
+        $this->session->set('jwt_token', $request->get('token'));
+        $this->session->set('refresh_token', $request->get('refresh_token'));
+
+
+        return ['token' => $request->get('token'), 'refresh_token' => $request->get('refresh_token')];
     }
 
     /** @inheritDoc */

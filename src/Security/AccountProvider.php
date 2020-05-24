@@ -5,80 +5,41 @@ declare(strict_types=1);
 namespace App\Security;
 
 use App\Model\Account;
+use App\Repository\Api\AccountRepository;
 use Exception;
 use RuntimeException;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
+use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
-use Symfony\Component\Serializer\SerializerInterface;
-use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
-use Symfony\Contracts\HttpClient\HttpClientInterface;
-use Throwable;
 
 /**
  * Custom account provider used to apply SSO server into Symfony environment
  */
 class AccountProvider implements UserProviderInterface
 {
-    private string $ssoHost;
-    private HttpClientInterface $client;
-    private SerializerInterface $serializer;
     private SessionInterface $session;
+    private AccountRepository $repository;
 
-// TODO: replace httpclient, serializer and session with account repository
-    public function __construct(
-        HttpClientInterface $client,
-        SerializerInterface $serializer,
-        SessionInterface $session,
-        string $ssoHost
-    ) {
-        $this->ssoHost = $ssoHost;
-        $this->client = $client;
-        $this->serializer = $serializer;
+    public function __construct(SessionInterface $session, AccountRepository $repository)
+    {
         $this->session = $session;
+        $this->repository = $repository;
     }
 
-    /**
-     * Symfony calls this method if you use features like switch_user
-     * or remember_me.
-     *
-     * @param string $token
-     * @return UserInterface
-     */
+    /** @inheritDoc */
     public function loadUserByUsername(string $token): UserInterface
     {
-        $this->session->set('jwt_token', $token);
-
-        try {
-            return $this->loadUser($token);
-        } catch (Throwable $e) {
-            dd($e);
-        }
-    }
-
-    /**
-     * @param string $token
-     * @return Account|array|object
-     * @throws ClientExceptionInterface
-     * @throws RedirectionExceptionInterface
-     * @throws ServerExceptionInterface
-     * @throws TransportExceptionInterface
-     */
-    private function loadUser(string $token): Account
-    {
-        $url = "http://{$this->ssoHost}/api/account/current";
-
-        $header = "Authorization: Bearer {$token}";
-
-        $response = $this->client->request('GET', $url, ['headers' => [$header]]);
-        $account = $this->serializer->deserialize($response->getContent(), Account::class, 'json');
+        $account = $this->fetchUser();
 
         if (!$account instanceof Account) {
-            throw new RuntimeException('Serialization failed.');
+            // todo: think when NULL will be returned
+            throw new UsernameNotFoundException('Auth error occured.');
         }
 
         return $account;
@@ -100,9 +61,50 @@ class AccountProvider implements UserProviderInterface
      * @throws UnsupportedUserException
      * @throws Exception
      */
-    public function refreshUser(UserInterface $user): UserInterface
+    public function refreshUser(UserInterface $user): ?UserInterface
     {
-        return $user;
+        // in case token lost or never set
+        if (!$this->session->has('jwt_token')) {
+            return null;
+        }
+
+        return $this->fetchUser();
+    }
+
+    /**
+     * @return Account|null
+     * @throws RedirectionExceptionInterface
+     * @throws ServerExceptionInterface
+     * @throws TransportExceptionInterface
+     */
+    public function fetchUser(): ?Account
+    {
+        try {
+            $account = $this->repository->findUserByToken($this->session->get('jwt_token'));
+        } catch (AuthenticationException $e) {
+            // this never happens on user load, but may happen on user refresh (if JWT token is outdated)
+            $this->refreshToken($this->session->get('refresh_token'));
+
+            $account = $this->repository->findUserByToken($this->session->get('jwt_token'));
+        } finally {
+            // returns account if token is valid, if token is successfully refreshed and false if refreshment didn't went well
+            return $account;
+        }
+    }
+
+    /**
+     * @param string $refresh
+     */
+    private function refreshToken(string $refresh): void
+    {
+        $response = $this->repository->obtainNewToken($refresh);
+
+        if ($response === null) {
+            throw new RuntimeException('abcd');
+        }
+
+        $this->session->set('jwt_token', $response->getToken());
+        $this->session->set('refresh_token', $response->getRefreshToken());
     }
 
     /**

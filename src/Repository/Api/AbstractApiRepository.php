@@ -16,7 +16,7 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
 abstract class AbstractApiRepository
 {
     private HttpClientInterface $client;
-    private SerializerInterface $serializer;
+    protected SerializerInterface $serializer;
 
     public function __construct(HttpClientInterface $client, SerializerInterface $serializer)
     {
@@ -41,10 +41,11 @@ abstract class AbstractApiRepository
         string $type,
         string $method = 'GET',
         string $body = null,
-        string $token = null
+        string $token = null,
+        $json = null
     ) {
         $headers = ($token !== null) ? ["Authorization: Bearer {$token}"] : null;
-        $response = $this->client->request($method, $url, ['headers' => $headers, 'body' => $body]);
+        $response = $this->client->request($method, $url, ['headers' => $headers, 'body' => $body, 'json' => $json]);
 
         return $this->handleSuccess($response, $type);
     }
