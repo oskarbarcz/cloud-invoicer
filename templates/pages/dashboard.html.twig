@@ -1,10 +1,17 @@
 {% extends 'base.html.twig' %}
 {% block title %}Dashboard | Cloud SSO{% endblock %}
 
+{%- block stylesheets -%}
+    {{ encore_entry_link_tags('dashboard') }}
+{% endblock %}
+
 {% block body %}
-    <div class="container">
-        {% include 'components/header.html.twig' %}
-        {% include 'components/user.html.twig' %}
-        {% include 'components/footer.html.twig' %}
+    <div class="container--full">
+        {% include 'components/dashboard/navbar.html.twig' %}
+        {% include 'components/dashboard/maintenance.html.twig' %}
     </div>
 {% endblock %}
+
+{%- block javascripts -%}
+    {{- encore_entry_script_tags('dashboard') -}}
+{%- endblock -%}

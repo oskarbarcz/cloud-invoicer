@@ -1,0 +1,31 @@
+<nav class="navbar">
+    <h2 class="navbar__title">
+        <img class="navbar__logo" src="{{ asset('media/architektur-logo-dark.svg') }}" alt="">
+        Invoicer
+        <span class="navbar__version">beta</span>
+    </h2>
+    <ul class="navbar__links">
+        <li class="navbar__element">
+            <a class="navbar__link" href="">Home</a>
+        </li>
+        <li class="navbar__element">
+            <a class="navbar__link" href="">O produkcie</a>
+        </li>
+        <li class="navbar__element">
+            <a class="navbar__link" href="">Cennik</a>
+        </li>
+        <li class="navbar__element">
+            <a class="navbar__link" href="">Kontakt</a>
+        </li>
+        {% if app.user %}
+            <li class="navbar__element">
+                <a class="navbar__link navbar__link--buttonized"
+                   href="">{{ app.user.name }} {{ app.user.surname }}</a>
+            </li>
+        {% else %}
+            <li class="navbar__element">
+                <a class="navbar__link navbar__link--buttonize" href="{{ url('app_sso-login') }}">Zaloguj się</a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>

@@ -65,7 +65,7 @@ class SsoAuthCustomer extends AbstractGuardAuthenticator
     /** @inheritDoc */
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey): RedirectResponse
     {
-        $url = $this->urlGenerator->generate('app_login-success');
+        $url = $this->urlGenerator->generate('app_index');
         return new RedirectResponse($url);
     }
 

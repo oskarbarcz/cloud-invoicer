@@ -8,7 +8,6 @@ use App\Model\Account;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class SecurityController extends AbstractController
@@ -31,7 +30,7 @@ class SecurityController extends AbstractController
     public function redirectToSso(Request $request): Response
     {
         if ($this->getUser() instanceof Account) {
-            return $this->redirectToRoute('app_login-success');
+            return $this->redirectToRoute('app_index');
         }
 
         $redirect = "furtherRedirect=http://{$this->selfHost}/login";
@@ -40,22 +39,6 @@ class SecurityController extends AbstractController
         return $this->redirect($url);
     }
 
-    /**
-     * @Route("/complete", name="app_login-success")
-     * @param Request          $request
-     * @param SessionInterface $session
-     * @return Response
-     */
-    public function showAuthedUser(Request $request, SessionInterface $session): Response
-    {
-        return $this->render(
-            'received.html.twig',
-            [
-                'token' => $request->get('token'),
-                'user' => $session->get('user'),
-            ]
-        );
-    }
     /**
      * @Route("/logout", name="app_logout")
      */
