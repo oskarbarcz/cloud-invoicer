@@ -10,7 +10,7 @@ services:
   App\Controller\:
     resource: '../src/Controller'
     tags: ['controller.service_arguments']
-  App\Controller\ReceiveController:
+  App\Controller\SecurityController:
     arguments:
       $ssoHost: '%env(string:SSO_SERVER_HOST)%'
       $selfHost: '%env(string:SELF_SERVER_HOST)%'

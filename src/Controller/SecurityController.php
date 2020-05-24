@@ -10,17 +10,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Serializer\SerializerInterface;
 
-class ReceiveController extends AbstractController
+class SecurityController extends AbstractController
 {
-    private SerializerInterface $serializer;
     private string $ssoHost;
     private string $selfHost;
 
-    public function __construct(SerializerInterface $serializer, string $ssoHost, string $selfHost)
+    public function __construct(string $ssoHost, string $selfHost)
     {
-        $this->serializer = $serializer;
         $this->ssoHost = $ssoHost;
         $this->selfHost = $selfHost;
     }
@@ -58,5 +55,12 @@ class ReceiveController extends AbstractController
                 'user' => $session->get('user'),
             ]
         );
+    }
+
+    /**
+     * @Route("/logout", name="app_logout")
+     */
+    public function logout()
+    {
     }
 }

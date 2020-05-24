@@ -20,7 +20,7 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Throwable;
 
 /**
- * Custom
+ * Custom account provider used to apply SSO server into Symfony environment
  */
 class AccountProvider implements UserProviderInterface
 {
@@ -29,7 +29,7 @@ class AccountProvider implements UserProviderInterface
     private SerializerInterface $serializer;
     private SessionInterface $session;
 
-
+// TODO: replace httpclient, serializer and session with account repository
     public function __construct(
         HttpClientInterface $client,
         SerializerInterface $serializer,
@@ -54,7 +54,7 @@ class AccountProvider implements UserProviderInterface
         $this->session->set('jwt_token', $token);
 
         try {
-            $this->loadUser($token);
+            return $this->loadUser($token);
         } catch (Throwable $e) {
             dd($e);
         }
