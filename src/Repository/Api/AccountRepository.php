@@ -18,8 +18,8 @@ use Throwable;
  */
 class AccountRepository extends AbstractApiRepository
 {
-    private const CURRENT_USER_ENDPOINT = 'http://192.168.42.194:8000/api/account/current';
-    private const REFRESH_TOKEN_ENDPOINT = 'http://192.168.42.194:8000/api/login/refresh';
+    private const CURRENT_USER_ENDPOINT = 'http://192.168.42.247:8000/api/account/current';
+    private const REFRESH_TOKEN_ENDPOINT = 'http://192.168.42.247:8000/api/login/refresh';
 
     /**
      * @param string $token

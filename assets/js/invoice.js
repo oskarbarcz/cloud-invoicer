@@ -1,1 +1,1 @@
-import '../sass/domain/login/index.sass';
+import '../sass/domain/invoice/index.sass';

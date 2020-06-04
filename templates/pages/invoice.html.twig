@@ -6,7 +6,13 @@
 {% endblock %}
 
 {% block body %}
-    FAKTURA
+    <div class="page-container">
+        <section class="page-container__element page">
+            {% block page %}
+                {% include 'components/invoice/customer-seller-informations.html.twig' %}
+            {% endblock %}
+        </section>
+    </div>
 {% endblock %}
 
 {%- block javascripts -%}
