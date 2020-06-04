@@ -9,6 +9,7 @@
     <div class="page-container">
         <section class="page-container__element page">
             {% block page %}
+                {% include 'components/invoice/header.html.twig' %}
                 {% include 'components/invoice/customer-seller-informations.html.twig' %}
             {% endblock %}
         </section>
