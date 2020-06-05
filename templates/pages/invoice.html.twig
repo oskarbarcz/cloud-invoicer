@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}Invoice | Cloud SSO{% endblock %}
+
+{%- block stylesheets -%}
+    {{ encore_entry_link_tags('invoice') }}
+{% endblock %}
+
+{% block body %}
+    <div class="page-container">
+        <section class="page-container__element page">
+            {% block page %}
+                {% include 'components/invoice/header.html.twig' %}
+                {% include 'components/invoice/customer-seller-informations.html.twig' %}
+                {% include 'components/invoice/products.html.twig' %}
+                {% include 'components/invoice/summary.html.twig' %}
+                {% include 'components/invoice/signage.html.twig' %}
+                {% include 'components/invoice/footer.html.twig' %}
+            {% endblock %}
+        </section>
+    </div>
+{% endblock %}
+
+{%- block javascripts -%}
+    {{- encore_entry_script_tags('invoice') -}}
+{%- endblock -%}

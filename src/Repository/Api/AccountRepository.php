@@ -18,8 +18,8 @@ use Throwable;
  */
 class AccountRepository extends AbstractApiRepository
 {
-    private const CURRENT_USER_ENDPOINT = 'http://192.168.42.86:8000/api/account/current';
-    private const REFRESH_TOKEN_ENDPOINT = 'http://192.168.42.86:8000/api/login/refresh';
+    private const CURRENT_USER_ENDPOINT = 'http://192.168.42.36:8000/api/account/current';
+    private const REFRESH_TOKEN_ENDPOINT = 'http://192.168.42.36:8000/api/login/refresh';
 
     /**
      * @param string $token
@@ -51,7 +51,7 @@ class AccountRepository extends AbstractApiRepository
      */
     public function obtainNewToken(string $refreshToken): ?RefreshTokenResponse
     {
-        dd($refreshToken);
+//        dd($refreshToken);
         try {
             return $this->fetchEndpoint(
                 self::REFRESH_TOKEN_ENDPOINT,

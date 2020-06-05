@@ -13,6 +13,7 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
+use Throwable;
 
 /**
  * Custom account provider used to apply SSO server into Symfony environment
@@ -80,6 +81,8 @@ class AccountProvider implements UserProviderInterface
             // this never happens on user load, but may happen on user refresh (if JWT token is outdated)
             $this->refreshToken($this->session->get('refresh_token'));
             $account = $this->repository->findUserByToken($this->session->get('jwt_token'));
+        } catch (Throwable $e) {
+            dd($e);
         } finally {
             // returns account if token is valid, if token is refreshed and null if refreshment didn't went well
             return $account;
