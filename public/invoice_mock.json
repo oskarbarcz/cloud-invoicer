@@ -1,0 +1,120 @@
+{
+  "uuid": "<here-some-random-id>",
+  "document": {
+    "id": "1/1970",
+    "language": "pl_PL",
+    "orderNumber": "44/EU/1970",
+    "sellDate": "1970-01-01 00:00:00",
+    "endDate": "1970-01-01 00:00:00",
+    "currency": {
+      "name": "Polski złoty",
+      "short": "PLN",
+      "literal": "zł"
+    },
+    "issue": {
+      "date": "1970-01-01 00:00:00",
+      "city": "m. Katowice"
+    }
+  },
+  "products": [
+    {
+      "product": {
+        "name": "Usługa programowania",
+        "unitPrice": {
+          "net": 45,
+          "vat": 10,
+          "vatStage": "23%",
+          "gross": 55
+        },
+        "unit": {
+          "name": "godzina",
+          "short": "h"
+        }
+      },
+      "amount": 160,
+      "productTotalPrice": {
+        "net": 4781.25,
+        "vat": 1099.69,
+        "vatStage": "23%",
+        "gross": 5880.94
+      }
+    },
+    {
+      "product": {
+        "name": "Usługa programowania",
+        "unitPrice": {
+          "net": 45,
+          "vat": 10,
+          "vatStage": "23%",
+          "gross": 55
+        },
+        "unit": {
+          "name": "godzina",
+          "short": "h"
+        }
+      },
+      "amount": 160,
+      "productTotalPrice": {
+        "net": 4781.25,
+        "vat": 1099.69,
+        "gross": 5880.94
+      }
+    }
+  ],
+  "taxStack": {
+    "taxes": [
+      {
+        "stage": "23%",
+        "net": 4781.25,
+        "vat": 1099.69,
+        "gross": 5880.94
+      }
+    ],
+    "total": {
+      "net": 4781.25,
+      "vat": 1099.69,
+      "gross": 5880.94
+    }
+  },
+  "parties": {
+    "seller": {
+      "name": "Oskar",
+      "surname": "Barcz",
+      "adress": {
+        "street": "Ul. Stanisława Moniuszki",
+        "propertyNumber": "10",
+        "apartmentNumber": "P/4",
+        "postCode": "40-005",
+        "city": "Katowice"
+      },
+      "companyData": {
+        "nip": "9542811840",
+        "regon": "12345678901112",
+        "verified": true
+      }
+    },
+    "customer": {
+      "name": "Oskar",
+      "surname": "Barcz",
+      "adress": {
+        "street": "Ul. Stanisława Moniuszki",
+        "propertyNumber": "10",
+        "apartmentNumber": "P/4",
+        "postCode": "40-005",
+        "city": "Katowice"
+      },
+      "companyData": {
+        "nip": "9542811840",
+        "regon": "12345678901112",
+        "verified": true
+      }
+    }
+  },
+  "payment": {
+    "accountNumber": "44 1020 4900 0000 8102 3271",
+    "maxDate": "1970-01-01 00:00:00",
+    "method": "przelew"
+  },
+  "updatedAt": "1970-01-01 00:00:00",
+  "createdAt": "1970-01-01 00:00:00"
+}
