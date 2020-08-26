@@ -1,0 +1,53 @@
+.navbar
+  position: relative
+  height: 70px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  max-width: 1200px
+  width: 100%
+  z-index: 1000
+  margin: 0 auto
+  &__title
+    position: relative
+    font-weight: 700
+    display: flex
+    align-items: center
+    font-size: 1.8em
+    color: #333333
+    user-select: none
+    min-width: 300px
+  &__logo
+    max-height: 45px
+    width: auto
+    margin-right: 10px
+  &__version
+    color: #075fba
+    position: absolute
+    bottom: 5px
+    right: -80px
+    text-transform: uppercase
+    font-size: 0.4em
+    letter-spacing: 1px
+  &__links
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: flex-end
+  &__link
+    color: #075fba
+    font-weight: 300
+    text-decoration: none
+    margin: 0 10px
+    transition: 0.1s ease-in-out
+    &:hover
+      color: darken(#075fba, 20)
+    &--buttonize
+      background: #075fba
+      color: white
+      padding: 5px 10px
+      border-radius: 3px
+      font-size: 0.9em
+      &:hover
+        background: darken(#075fba, 20)
+        color: white

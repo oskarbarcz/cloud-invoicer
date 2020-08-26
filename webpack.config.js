@@ -9,6 +9,7 @@ Encore
     .setPublicPath('/build')
     .addEntry('login', './assets/js/login.js')
     .addEntry('dashboard', './assets/js/dashboard.js')
+    .addEntry('portfolio', './assets/js/portfolio.js')
     .addEntry('invoice', './assets/js/invoice.js')
     .splitEntryChunks()
     .enableSingleRuntimeChunk()

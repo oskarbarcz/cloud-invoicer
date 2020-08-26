@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{%- block title -%}Oskar Barcz{%- endblock -%}
+
+{%- block stylesheets -%}
+    {{ encore_entry_link_tags('portfolio') }}
+{% endblock %}
+
+{%- block body -%}
+    {% include 'portfolio/navigation.html.twig' %}
+    <div class="about-me"></div>
+    <div class="sections-container">
+        <section class="section">
+            <h2 class="section__title">Stack</h2>
+            <div class="section__content">Tutaj będzie content</div>
+        </section>
+        <section class="section">
+            <h2 class="section__title">Projekty</h2>
+            <div class="section__content">Tutaj będzie content</div>
+        </section>
+        <section class="section">
+            <h2 class="section__title">Usługi</h2>
+            <div class="section__content">Tutaj będzie content</div>
+        </section>
+        <section class="section">
+            <h2 class="section__title">Kontakt</h2>
+            <div class="section__content">Tutaj będzie content</div>
+        </section>
+    </div>
+{%- endblock -%}
