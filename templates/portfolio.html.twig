@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+{% import "portfolio/components/section-title.html.twig" as macro %}
+
 {%- block title -%}Oskar Barcz{%- endblock -%}
 
 {%- block stylesheets -%}
@@ -11,19 +13,19 @@
     <div class="about-me"></div>
     <div class="sections-container">
         <section class="section">
-            <h2 class="section__title">Stack</h2>
+            {{ macro.section_titile("Stack") }}
             <div class="section__content">Tutaj będzie content</div>
         </section>
         <section class="section">
-            <h2 class="section__title">Projekty</h2>
+            {{ macro.section_titile("Projekty") }}
             <div class="section__content">Tutaj będzie content</div>
         </section>
         <section class="section">
-            <h2 class="section__title">Usługi</h2>
+            {{ macro.section_titile("Usługi") }}
             <div class="section__content">Tutaj będzie content</div>
         </section>
         <section class="section">
-            <h2 class="section__title">Kontakt</h2>
+            {{ macro.section_titile("Kontakt") }}
             <div class="section__content">Tutaj będzie content</div>
         </section>
     </div>
